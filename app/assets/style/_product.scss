@@ -1,0 +1,265 @@
+// optical
+
+.nav-bar{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    li{
+        width: 100%;
+        text-align: center;
+        border-left: 1px solid #DCDCDC;
+        &:last-child{
+            border-right:1px solid #DCDCDC;
+        }
+    }
+    a{
+        display: block;
+        padding: 24px 0;
+        color: #000;
+        font-size: 32px;
+        font-weight: 500;
+        border-bottom: 8px solid transparent;
+        &:hover{
+            border-bottom: 8px solid $main-color;
+        }
+        &.active{
+            border-bottom: 8px solid $main-color;
+        }
+    }
+}
+.nav-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.optical-nav-img-left{
+    width: 50%;
+    background-image: url(../images/product-header-1.png);
+    height: 296px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.optical-nav-img-right{
+    width: 50%;
+    background-image: url(../images/product-header-2.png);
+    height: 296px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.product-h1{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 32px;
+    span{
+        font-size: 42px;
+        font-weight: 500;
+    }
+}
+.optical-list{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        width: 23%;
+        margin: 0 1% 104px;
+
+    }
+    p{
+        color: #000;
+        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    span{
+        color:$main-color;
+        font-weight: 500;
+    }
+}
+
+.color-block{
+    position: relative;
+    &::before{
+        content:'';
+        position: absolute;
+        top:0px;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        background-color: #5F3E2D;
+    }
+    &::after{
+        content:'';
+        position: absolute;
+        top:0px;
+        left: 32px;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        background-color: #B75929;
+    }
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    li{
+        border: 1px solid #555555;
+        border-right:none;
+        font-size: 18px;
+        &:last-child{
+            border-right:1px solid #555555;
+        }
+    }
+    a{
+        display: block;
+        color: #000;
+        padding: 12px 16px;
+        &.active{
+            background-color: #000;
+            color: #fff;
+        }
+        &:hover{
+            opacity: 1;
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .nav-bar{
+        padding: 0;
+        a{
+            font-size: 24px;
+            padding: 16px 0;
+        }
+    }
+    .optical-nav-img-left{
+        background-image: url(../images/product-header-sm-1.png);
+    }
+    .optical-nav-img-right{
+        background-image: url(../images/product-header-sm-2.png);
+    }
+    .optical-list{
+        margin-bottom: 40px;
+        li{
+            width: 48%;
+            margin: 0 1% 64px;
+            &:nth-child(n+11){
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .nav-bar{
+        a{
+            font-size: 16px;
+        }
+    }
+    .nav-img{
+        margin-bottom: 40px;
+    }
+    .optical-nav-img-left,.optical-nav-img-right{
+        height: 136px;
+    }
+    .product-h1{
+        font-size: 24px;
+        margin-bottom: 24px;
+        span{
+            font-size: 24px;
+        }
+    }
+    .optical-list{
+        li{
+            width: 98%;
+            margin: 0 1% 48px;
+            &:nth-child(n+6){
+                display: none;
+            }
+        }
+    }
+    .page{
+        margin-bottom: 64px;
+        li{
+            font-size: 16px;
+        }
+        a{
+            padding: 8px 10px;
+        }
+    }
+}
+
+// sunglass
+.sunglass-nav-img-left{
+    width: 50%;
+    background-image: url(../images/product-header-3.png);
+    height: 296px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.sunglass-nav-img-right{
+    width: 50%;
+    background-image: url(../images/product-header-4.png);
+    height: 296px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sunglass-list{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        width: 31.33%;
+        margin: 0 1% 104px;
+    }
+    p{
+        color: #000;
+        font-size: 24px;
+        display: flex;
+        justify-content: space-between;
+    }
+    span{
+        color:$main-color;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:992px) {
+    .sunglass-nav-img-left{
+        background-image: url(../images/product-header-sm-3.png);
+    }
+    .sunglass-nav-img-right{
+        background-image: url(../images/product-header-sm-4.png);
+    }
+    .sunglass-list{
+        margin-bottom: 40px;
+        li{
+            width: 48%;
+            margin: 0 1% 64px;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .sunglass-nav-img-left, .sunglass-nav-img-right{
+        height: 136px;
+    }
+    .sunglass-list{
+        li{
+            width: 98%;
+            margin: 0 1% 48px;
+            &:nth-child(n+6){
+                display: none;
+            }
+        }
+    }
+}
+

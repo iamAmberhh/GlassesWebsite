@@ -1,0 +1,328 @@
+.banner{
+    background-image: url(../images/home-header.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.banner-content{
+    color:$second-color;
+    text-align: right;
+    padding-top: 296px;
+    p{
+        font-size: 36px;
+    }
+    h1{
+        font-size: 64px;
+        font-weight: bold;
+        margin-bottom: 4px;
+    }
+    a{
+        padding: 6px 12px;
+        font-size: 20px;
+        background-color:$main-color;
+        color: #FFF;
+    }
+}
+.bg-pink{
+    background-color: #FBF2F2;
+}
+.section{
+    padding: 80px 0;
+    h2{
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+    }
+}
+// 服務
+.service{
+    color:$second-color;
+    h2{
+        margin-bottom: 32px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+    li{
+        width: 23%;
+        margin:1%;
+    }
+    img{
+        max-width:100px;
+        margin: 0 auto 24px;
+    }
+    h3{
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    p{
+        color: #000;
+    }
+}
+// 經典鏡框
+.classic{
+    h2{
+        color: $second-color;
+        margin-bottom: 48px;
+    }
+    ul{
+        display: flex;
+    }
+    li{
+        width: 32.33%;
+        margin-right: 2%;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    a:hover{
+        opacity: 1;
+        img{
+            opacity: 0.8;
+        }
+        p{
+            background-color: $main-color;
+            color: #FFF;
+        }
+    }
+    p{
+        font-size: 48px;
+        font-weight: 900;
+        text-align: center;
+        color: $main-color;
+        font-style: italic;
+    }
+}
+// 聯名鏡框
+.co-braning{
+    background-image: url(../images/index-bg.png);
+    background-size: cover;
+    background-position: center;
+    h2{
+        color: #FFF;
+        margin-bottom: 48px;
+    }
+    ul{
+        display: flex;
+        justify-content: center;
+    }
+    li{
+        width: 50%;
+    }
+    p{
+        font-size: 48px;
+        font-weight: 900;
+        text-align: center;
+        color: $main-color;
+        font-style: italic;
+        background-color: #FFF;
+    }
+    .co-braning-double-a{
+        background-image: url(../images/home-section4-1.png);
+        background-position: center;
+        background-size: cover;
+        height:240px;
+    }
+    .co-braning-youth{
+        background-image: url(../images/home-section4-2.png);
+        background-position: center;
+        background-size: cover;
+        height:240px;
+    }
+}
+// 顧客評價
+.customer{ 
+    h2{
+        color:$second-color;
+        margin-bottom: 48px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    li{
+        width: 22%;
+        margin: 1%;
+        border: 1px solid #DEE2E6;
+    }
+}
+.card{
+    padding: 16px;
+    height: 205px;
+    display: flex;
+    flex-direction: column;
+    .card-title{
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    span{
+        margin-top: auto;
+        color: #707070;
+        font-size: 14px;
+    }
+}
+// 聯絡表單
+.contact{
+    max-width: 600px;
+    margin: 0 auto;
+    h2{
+        color: $second-color;
+        margin-bottom: 48px;
+    }
+    p{
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    .label{
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+    input[type="text"],input[type="textarea"]{
+        font-family: 'Noto Sans TC', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        width: 100%;
+        padding: 6px 12px;
+        border-radius:5px;
+        border:1px solid #000;
+        margin-bottom: 16px;
+    }
+    input[type="textarea"]{
+        height: 130px;
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        width: 416px;
+        background-color: $main-color;
+        color: #FFF;
+        padding: 16px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+.check{
+    margin-bottom: 48px;
+    input[type="checkbox"]{
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+
+    }
+}
+
+@media (max-width:992px) {
+    .service{
+        li{
+            width: 48%;
+        }
+    }
+    .classic{
+        ul{
+            display: block;
+        }
+        li{
+            width: 50%;
+            margin: 0 auto 24px;
+            &:last-child{
+                margin: 0 auto;
+            }
+        }
+    }
+    .co-braning{
+        background-image: url(../images/index-bg-sm.png);
+        ul{
+            display: block;
+            margin: 0 auto;
+        }
+        li{
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+    .customer{
+        li{
+            width: 47.5%;
+        }
+    }
+    .contact{
+        max-width:640px;
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .banner{
+        background-image: url(../images/home-header-sm.png);   
+        height: 396px;
+    }
+    .banner-content{
+        padding-top: 144px;
+        p{
+            font-size: 16px;
+        }
+        h1{
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+    }
+    .section{
+        padding: 40px 0;
+        h2{
+            font-size: 24px;
+        }
+    }
+    .service{
+        li{
+            width: 100%;
+        }
+    }
+    .classic{
+        li{
+            width: 98%;
+        }
+        p{
+            font-size: 40px;
+        }
+    }
+    .co-braning{
+        .co-braning-double-a{
+            background-image: url(../images/home-section4-1-sm.png);
+        }
+        .co-braning-youth{
+            background-image: url(../images/home-section4-2-sm.png);
+        }
+    }
+    .customer{
+        li{
+            width: 98%;
+            margin: 0 auto 16px;
+        }
+    }
+    .contact{
+        max-width:576px;
+        input[type="text"],input[type="textarea"]{
+            width: 95%;
+        }
+        button{
+            width: 100%;
+        }
+    }
+    .check{
+        label{
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+.section-container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 96px auto 80px;
+    h1{
+        font-size: 48px;
+        font-weight: bold;
+        padding-left: 20px;
+        margin-bottom: 32px;
+        position: relative;
+        &::before {
+            content:'';
+            position: absolute;
+            width: 10px;
+            height: 72px;
+            top:0;
+            left:0;
+            background-color: $main-color;
+            margin-right: 16px;
+          }
+    }
+}
+.store-select{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    font-weight: 500;
+    p{
+        font-size: 24px;
+        margin-right: 16px;
+    }
+    select{
+        font-size: 18px;
+        width: 300px;
+        padding: 6px 12px;
+    }
+}
+.store-list{
+    display: flex;
+    flex-wrap: wrap;
+    color: #212529;
+    font-weight: 500;
+}
+.store-list-item{
+    width: 31.33%;
+    margin: 0 1% 48px;
+    h2{
+        padding: 8px 24px;
+        border: 1px solid #00000020;
+        font-size: 24px;
+    }
+}
+.store-detail{
+    border: 1px solid #00000020;
+    padding: 16px 24px;
+    li{
+        margin-bottom: 8px;
+        font-size: 20px;
+        display: flex;
+    }
+    span{
+        margin-right: 10px;
+        vertical-align: text-top;
+    }
+    a{
+        color: #212529;
+    }
+}
+.store-btn{
+    display: block;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    background-color: #000;
+}
+
+@media (max-width:992px) {
+    .section-container{
+        max-width:  800px;
+        margin: 80px auto 80px;
+    }
+    .store-list-item{
+        width: 48%;
+        margin: 0 1% 24px;
+    }
+}
+
+@media (max-width:767px) {
+    .section-container{
+        max-width: 600px;
+        margin: 40px auto 64px;
+        h1{
+            font-size: 24px;
+            margin-bottom: 24px;
+            &::before {
+                width: 8px;
+                height: 36px;
+              }
+        }
+    }
+    .store-select{
+        p{
+            font-size: 16px;
+            margin-right: 8px;
+        }
+        select{
+            width: 276px;
+        }
+    }
+    .store-list-item{
+        width: 98%;
+    }
+}
+
+
+// 分店細節
+
+.taipei-store-list{
+    display: flex;
+    color: #212529;
+    font-weight: 500;
+}
+.store-item{
+    width: 40%;
+    margin-right: 2%;
+    h2{
+        padding: 8px 24px;
+        border: 1px solid #00000020;
+        font-size: 24px;
+    }
+}
+.map{
+    width: 58%;
+}
+
+
+@media (max-width:992px) {
+    .taipei-store-list{
+        display: block;
+    }
+    .store-item{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        img{
+            width: 50%;
+            margin-right: 24px;
+        }
+    }
+    .map{
+        width: 100%;
+    }
+}
+
+@media (max-width:767px) {
+    .store-item{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+}

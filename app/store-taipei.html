@@ -1,0 +1,39 @@
+---
+title: 門市據點
+layout: ./app/layout.ejs
+engine: ejs
+current: store-taipei
+---
+
+
+<main class="section-container">
+    <h1>門市據點</h1>
+    <div class="store-select">
+        <p>選擇分店</p>
+        <select>
+            <option value="Taipei-ZhongShan">台北中山旗艦店</option>
+            <option value="Taipei-GreenPark">台北綠園店</option>
+        </select>
+    </div>
+
+    <section class="taipei-store-list">
+        <div class="store-item">
+            <img src="assets/images/store-1.png" alt="store">
+            <div>
+                <h2>台北中山旗艦店</h2>
+                <ul class="store-detail">
+                    <li><a href="tel:+88620001234"><span class="material-icons">
+                                call
+                            </span>電話：(02)000-1234</a></li>
+                    <li><span class="material-icons">
+                            schedule
+                        </span>營業時間：10:00-21:00</li>
+                    <li><span class="material-icons">
+                            location_on
+                        </span>地址：台北市中山區南京東路25巷2-1號</li>
+                </ul>
+            </div>
+        </div>
+        <img src="assets/images/map.png" alt="map" class="map">
+    </section>
+</main>
