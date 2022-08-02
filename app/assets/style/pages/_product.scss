@@ -61,11 +61,12 @@
 }
 .optical-list{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 -12px;
     li{
-        width: 23%;
-        margin: 0 1% 104px;
-
+        width: 22.5%;
+        margin: 0 12px 80px;
     }
     p{
         color: #000;
@@ -77,29 +78,36 @@
         color:$main-color;
         font-weight: 500;
     }
+    ul{
+        display: flex;
+        li{
+            width: 24px;
+            margin: 0px 8px 0px 0px;
+        }
+    }
 }
 
-.color-block{
-    position: relative;
-    &::before{
-        content:'';
-        position: absolute;
-        top:0px;
-        width: 24px;
-        height: 24px;
-        border-radius: 4px;
-        background-color: #5F3E2D;
-    }
-    &::after{
-        content:'';
-        position: absolute;
-        top:0px;
-        left: 32px;
-        width: 24px;
-        height: 24px;
-        border-radius: 4px;
-        background-color: #B75929;
-    }
+// .color-block{
+//     a{
+//         display: block;
+//         width: 24px;
+//         height: 24px;
+//         border-radius: 4px;
+//     }
+// }
+.color-block-1{
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: #5F3E2D;
+}
+.color-block-2{
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: #B75929;
 }
 
 .page{
@@ -147,8 +155,8 @@
     .optical-list{
         margin-bottom: 40px;
         li{
-            width: 48%;
-            margin: 0 1% 64px;
+            width: 47%;
+            margin: 0 12px 40px;
             &:nth-child(n+11){
                 display: none;
             }
@@ -178,7 +186,7 @@
     .optical-list{
         li{
             width: 98%;
-            margin: 0 1% 48px;
+            margin: 0 auto 24px;
             &:nth-child(n+6){
                 display: none;
             }
@@ -216,9 +224,10 @@
 .sunglass-list{
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -12px;
     li{
-        width: 31.33%;
-        margin: 0 1% 104px;
+        width: 30%;
+        margin: 0 12px 80px;
     }
     p{
         color: #000;
@@ -229,6 +238,13 @@
     span{
         color:$main-color;
         font-weight: 500;
+    }
+    ul{
+        display: flex;
+        li{
+            width: 24px;
+            margin: 0px 8px 0px 0px;
+        }
     }
 }
 
@@ -242,8 +258,8 @@
     .sunglass-list{
         margin-bottom: 40px;
         li{
-            width: 48%;
-            margin: 0 1% 64px;
+            width: 47%;
+            margin: 0 12px 40px;
         }
     }
 }
@@ -255,7 +271,7 @@
     .sunglass-list{
         li{
             width: 98%;
-            margin: 0 1% 48px;
+            margin: 0 auto 24px;
             &:nth-child(n+6){
                 display: none;
             }

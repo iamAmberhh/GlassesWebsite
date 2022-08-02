@@ -5,9 +5,13 @@
     height: 100vh;
 }
 .banner-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-end;
     color:$second-color;
     text-align: right;
-    padding-top: 296px;
     p{
         font-size: 36px;
     }
@@ -44,10 +48,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between; 
+        margin: 0 -12px;
     }
     li{
         width: 23%;
-        margin:1%;
+        padding: 0 12px;
     }
     img{
         max-width:100px;
@@ -74,10 +79,7 @@
     }
     li{
         width: 32.33%;
-        margin-right: 2%;
-        &:last-child{
-            margin-right: 0;
-        }
+        margin: 0 12px;
     }
     a:hover{
         opacity: 1;
@@ -144,10 +146,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0 -12px;
     }
     li{
         width: 22%;
-        margin: 1%;
+        margin: 0 12px;
         border: 1px solid #DEE2E6;
     }
 }
@@ -189,7 +192,6 @@
         line-height: 1.5;
         width: 100%;
         padding: 6px 12px;
-        border-radius:5px;
         border:1px solid #000;
         margin-bottom: 16px;
     }
@@ -224,7 +226,8 @@
 @media (max-width:992px) {
     .service{
         li{
-            width: 48%;
+            width: 45%;
+            margin-bottom: 36px;
         }
     }
     .classic{
@@ -252,7 +255,8 @@
     }
     .customer{
         li{
-            width: 47.5%;
+            width: 45%;
+            margin-bottom: 24px;
         }
     }
     .contact{
@@ -269,7 +273,6 @@
         height: 396px;
     }
     .banner-content{
-        padding-top: 144px;
         p{
             font-size: 16px;
         }
