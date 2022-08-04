@@ -27,11 +27,26 @@
             border-bottom: 8px solid $main-color;
         }
     }
+    @include pad{
+        padding: 0;
+        a{
+            font-size: 24px;
+            padding: 16px 0;
+        }
+    }
+    @include mobile{
+        a{
+            font-size: 16px;
+        }
+    }
 }
 .nav-img{
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
+    @include mobile{
+        margin-bottom: 40px;
+    }
 }
 .optical-nav-img-left{
     width: 50%;
@@ -40,6 +55,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include pad{
+        background-image: url(../images/product-header-sm-1.png);
+    }
+    @include mobile{
+        height: 136px;
+    }
 }
 
 .optical-nav-img-right{
@@ -49,6 +70,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include pad{
+        background-image: url(../images/product-header-sm-2.png);
+    }
+    @include mobile{
+        height: 136px;
+    }
 }
 .product-h1{
     font-size: 32px;
@@ -57,6 +84,13 @@
     span{
         font-size: 42px;
         font-weight: 500;
+    }
+    @include mobile{
+        font-size: 24px;
+        margin-bottom: 24px;
+        span{
+            font-size: 24px;
+        }
     }
 }
 .optical-list{
@@ -85,16 +119,26 @@
             margin: 0px 8px 0px 0px;
         }
     }
+    @include pad{
+        margin-bottom: 40px;
+        li{
+            width: 47%;
+            margin: 0 12px 40px;
+            &:nth-child(n+11){
+                display: none;
+            }
+        }
+    }
+    @include mobile{
+        li{
+            width: 98%;
+            margin: 0 auto 24px;
+            &:nth-child(n+6){
+                display: none;
+            }
+        }
+    }
 }
-
-// .color-block{
-//     a{
-//         display: block;
-//         width: 24px;
-//         height: 24px;
-//         border-radius: 4px;
-//     }
-// }
 .color-block-1{
     display: block;
     width: 24px;
@@ -136,63 +180,7 @@
             color: #fff;
         }
     }
-}
-
-@media (max-width:992px) {
-    .nav-bar{
-        padding: 0;
-        a{
-            font-size: 24px;
-            padding: 16px 0;
-        }
-    }
-    .optical-nav-img-left{
-        background-image: url(../images/product-header-sm-1.png);
-    }
-    .optical-nav-img-right{
-        background-image: url(../images/product-header-sm-2.png);
-    }
-    .optical-list{
-        margin-bottom: 40px;
-        li{
-            width: 47%;
-            margin: 0 12px 40px;
-            &:nth-child(n+11){
-                display: none;
-            }
-        }
-    }
-}
-
-@media (max-width:767px) {
-    .nav-bar{
-        a{
-            font-size: 16px;
-        }
-    }
-    .nav-img{
-        margin-bottom: 40px;
-    }
-    .optical-nav-img-left,.optical-nav-img-right{
-        height: 136px;
-    }
-    .product-h1{
-        font-size: 24px;
-        margin-bottom: 24px;
-        span{
-            font-size: 24px;
-        }
-    }
-    .optical-list{
-        li{
-            width: 98%;
-            margin: 0 auto 24px;
-            &:nth-child(n+6){
-                display: none;
-            }
-        }
-    }
-    .page{
+    @include mobile{
         margin-bottom: 64px;
         li{
             font-size: 16px;
@@ -203,6 +191,7 @@
     }
 }
 
+
 // sunglass
 .sunglass-nav-img-left{
     width: 50%;
@@ -211,6 +200,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include pad{
+        background-image: url(../images/product-header-sm-3.png);
+    }
+    @include mobile{
+        height: 136px;
+    }
 }
 .sunglass-nav-img-right{
     width: 50%;
@@ -219,6 +214,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include pad{
+        background-image: url(../images/product-header-sm-4.png);
+    }
+    @include mobile{
+        height: 136px;
+    }
 }
 
 .sunglass-list{
@@ -246,29 +247,14 @@
             margin: 0px 8px 0px 0px;
         }
     }
-}
-
-@media (max-width:992px) {
-    .sunglass-nav-img-left{
-        background-image: url(../images/product-header-sm-3.png);
-    }
-    .sunglass-nav-img-right{
-        background-image: url(../images/product-header-sm-4.png);
-    }
-    .sunglass-list{
+    @include pad{
         margin-bottom: 40px;
         li{
             width: 47%;
             margin: 0 12px 40px;
         }
     }
-}
-
-@media (max-width:767px) {
-    .sunglass-nav-img-left, .sunglass-nav-img-right{
-        height: 136px;
-    }
-    .sunglass-list{
+    @include mobile{
         li{
             width: 98%;
             margin: 0 auto 24px;

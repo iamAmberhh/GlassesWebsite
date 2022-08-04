@@ -1,5 +1,8 @@
 .blog-nav{
     background-color: $second-color;
+    @include mobile{
+        display: none;
+    }
 }
 .blog-menu{
     display: flex;
@@ -22,19 +25,39 @@
         font-size: 30px;
         color: #fff;
     }
+    @include pad{
+        max-width:800px;
+    }
 }
 
 
 .blog-list{
     margin-bottom: 124px;
+    @include pad{
+        margin-bottom: 80px;
+    }
+    @include mobile{
+        margin-bottom: 64px;
+    }
 }
 .article-list{
     display: flex;
     margin-bottom: 60px;
+    @include pad{
+        margin-bottom: 24px;
+    }
+    @include mobile{
+        display: block;
+    }
 }
 .article-img{
     margin-right: 24px;
     max-width: 49%;
+    @include mobile{
+        margin: 0 0 8px;
+        display: block;
+        max-width: 100%;
+    }
 }
 
 .list-content{
@@ -67,20 +90,7 @@
         text-align: right;
         margin-top: auto;
     }
-}
-
-
-@media (max-width:992px) {
-    .blog-menu{
-        max-width:800px;
-    }
-    .blog-list{
-        margin-bottom: 80px;
-    }
-    .article-list{
-        margin-bottom: 24px;
-    }
-    .list-content{
+    @include pad{
         h2{
             font-size: 24px;
         }
@@ -106,26 +116,7 @@
             }
         }
     }
-
-}
-
-
-@media (max-width:767px) {
-    .blog-nav{
-        display: none;
-    }
-    .blog-list{
-        margin-bottom: 64px;
-    }
-    .article-list{
-        display: block;
-    }
-    .article-img{
-        margin: 0 0 8px;
-        display: block;
-        max-width: 100%;
-    }
-    .list-content{
+    @include mobile{
         width: 100%;
         p{
             display: none;

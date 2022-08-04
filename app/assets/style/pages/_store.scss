@@ -17,6 +17,20 @@
             margin-right: 16px;
           }
     }
+    @include pad{
+        margin: 80px auto 80px;
+    }
+    @include mobile{
+        margin: 40px auto 64px;
+        h1{
+            font-size: 24px;
+            margin-bottom: 24px;
+            &::before {
+                width: 8px;
+                height: 36px;
+              }
+        }
+    }
 }
 .store-select{
     display: flex;
@@ -31,6 +45,15 @@
         font-size: 18px;
         width: 300px;
         padding: 6px 12px;
+    }
+    @include mobile{
+        p{
+            font-size: 16px;
+            margin-right: 8px;
+        }
+        select{
+            width: 276px;
+        }
     }
 }
 .store-list{
@@ -47,6 +70,13 @@
         padding: 8px 24px;
         border: 1px solid #00000020;
         font-size: 24px;
+    }
+    @include pad{
+        width: 46%;
+        margin: 0 12px 24px;
+    }
+    @include mobile{
+        width: 100%;
     }
 }
 .store-detail{
@@ -73,42 +103,6 @@
     background-color: #000;
 }
 
-@media (max-width:992px) {
-    .section-container{
-        margin: 80px auto 80px;
-    }
-    .store-list-item{
-        width: 46%;
-        margin: 0 12px 24px;
-    }
-}
-
-@media (max-width:767px) {
-    .section-container{
-        margin: 40px auto 64px;
-        h1{
-            font-size: 24px;
-            margin-bottom: 24px;
-            &::before {
-                width: 8px;
-                height: 36px;
-              }
-        }
-    }
-    .store-select{
-        p{
-            font-size: 16px;
-            margin-right: 8px;
-        }
-        select{
-            width: 276px;
-        }
-    }
-    .store-list-item{
-        width: 100%;
-    }
-}
-
 
 // 分店細節
 
@@ -116,6 +110,9 @@
     display: flex;
     color: #212529;
     font-weight: 500;
+    @include pad{
+        display: block;
+    }
 }
 .store-item{
     width: 40%;
@@ -125,17 +122,7 @@
         border: 1px solid #00000020;
         font-size: 24px;
     }
-}
-.map{
-    width: 58%;
-}
-
-
-@media (max-width:992px) {
-    .taipei-store-list{
-        display: block;
-    }
-    .store-item{
+    @include pad{
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -145,16 +132,16 @@
             margin-right: 24px;
         }
     }
-    .map{
-        width: 100%;
-    }
-}
-
-@media (max-width:767px) {
-    .store-item{
+    @include mobile{
         display: block;
         img{
             width: 100%;
         }
+    }
+}
+.map{
+    width: 58%;
+    @include pad{
+        width: 100%;
     }
 }

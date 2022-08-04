@@ -3,6 +3,10 @@
     background-size: cover;
     background-position: center;
     height: 100vh;
+    @include mobile{
+        background-image: url(../images/home-header-sm.png);   
+        height: 396px;
+    }
 }
 .banner-content{
     display: flex;
@@ -26,6 +30,15 @@
         background-color:$main-color;
         color: #FFF;
     }
+    @include mobile{
+        p{
+            font-size: 16px;
+        }
+        h1{
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+    }
 }
 .bg-pink{
     background-color: #FBF2F2;
@@ -36,6 +49,12 @@
         text-align: center;
         font-size: 48px;
         font-weight: bold;
+    }
+    @include mobile{
+        padding: 40px 0;
+        h2{
+            font-size: 24px;
+        }
     }
 }
 // 服務
@@ -53,6 +72,13 @@
     li{
         width: 23%;
         padding: 0 12px;
+        @include pad{
+            width: 45%;
+            margin-bottom: 36px;
+        }
+        @include mobile{
+            width: 100%;
+        }
     }
     img{
         max-width:100px;
@@ -98,6 +124,26 @@
         color: $main-color;
         font-style: italic;
     }
+    @include pad{
+        ul{
+            display: block;
+        }
+        li{
+            width: 50%;
+            margin: 0 auto 24px;
+            &:last-child{
+                margin: 0 auto;
+            }
+        }
+    }
+    @include mobile{
+        li{
+            width: 98%;
+        }
+        p{
+            font-size: 40px;
+        }
+    }
 }
 // 聯名鏡框
 .co-braning{
@@ -123,17 +169,34 @@
         font-style: italic;
         background-color: #FFF;
     }
-    .co-braning-double-a{
-        background-image: url(../images/home-section4-1.png);
-        background-position: center;
-        background-size: cover;
-        height:240px;
+    @include pad{
+        background-image: url(../images/index-bg-sm.png);
+        ul{
+            display: block;
+            margin: 0 auto;
+        }
+        li{
+            width: 100%;
+            margin-bottom: 24px;
+        }
     }
-    .co-braning-youth{
-        background-image: url(../images/home-section4-2.png);
-        background-position: center;
-        background-size: cover;
-        height:240px;
+}
+.co-braning-double-a{
+    background-image: url(../images/home-section4-1.png);
+    background-position: center;
+    background-size: cover;
+    height:240px;
+    @include mobile{
+        background-image: url(../images/home-section4-1-sm.png);
+    }
+}
+.co-braning-youth{
+    background-image: url(../images/home-section4-2.png);
+    background-position: center;
+    background-size: cover;
+    height:240px;
+    @include mobile{
+        background-image: url(../images/home-section4-2-sm.png);
     }
 }
 // 顧客評價
@@ -152,6 +215,14 @@
         width: 22%;
         margin: 0 12px;
         border: 1px solid #DEE2E6;
+        @include pad{
+            width: 45%;
+            margin-bottom: 24px;
+        }
+        @include mobile{
+            width: 98%;
+            margin: 0 auto 16px;
+        }
     }
 }
 .card{
@@ -212,6 +283,21 @@
             opacity: 0.8;
         }
     }
+    @include pad{
+        max-width:640px;
+        p{
+            font-size: 16px;
+        }
+    }
+    @include mobile{
+        max-width:576px;
+        input[type="text"],input[type="textarea"]{
+            width: 95%;
+        }
+        button{
+            width: 100%;
+        }
+    }
 }
 .check{
     margin-bottom: 48px;
@@ -221,109 +307,7 @@
         margin-right: 8px;
 
     }
-}
-
-@media (max-width:992px) {
-    .service{
-        li{
-            width: 45%;
-            margin-bottom: 36px;
-        }
-    }
-    .classic{
-        ul{
-            display: block;
-        }
-        li{
-            width: 50%;
-            margin: 0 auto 24px;
-            &:last-child{
-                margin: 0 auto;
-            }
-        }
-    }
-    .co-braning{
-        background-image: url(../images/index-bg-sm.png);
-        ul{
-            display: block;
-            margin: 0 auto;
-        }
-        li{
-            width: 100%;
-            margin-bottom: 24px;
-        }
-    }
-    .customer{
-        li{
-            width: 45%;
-            margin-bottom: 24px;
-        }
-    }
-    .contact{
-        max-width:640px;
-        p{
-            font-size: 16px;
-        }
-    }
-}
-
-@media (max-width:767px) {
-    .banner{
-        background-image: url(../images/home-header-sm.png);   
-        height: 396px;
-    }
-    .banner-content{
-        p{
-            font-size: 16px;
-        }
-        h1{
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-    }
-    .section{
-        padding: 40px 0;
-        h2{
-            font-size: 24px;
-        }
-    }
-    .service{
-        li{
-            width: 100%;
-        }
-    }
-    .classic{
-        li{
-            width: 98%;
-        }
-        p{
-            font-size: 40px;
-        }
-    }
-    .co-braning{
-        .co-braning-double-a{
-            background-image: url(../images/home-section4-1-sm.png);
-        }
-        .co-braning-youth{
-            background-image: url(../images/home-section4-2-sm.png);
-        }
-    }
-    .customer{
-        li{
-            width: 98%;
-            margin: 0 auto 16px;
-        }
-    }
-    .contact{
-        max-width:576px;
-        input[type="text"],input[type="textarea"]{
-            width: 95%;
-        }
-        button{
-            width: 100%;
-        }
-    }
-    .check{
+    @include mobile{
         label{
             display: flex;
         }
